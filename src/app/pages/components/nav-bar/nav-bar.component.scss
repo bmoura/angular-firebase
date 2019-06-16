@@ -1,0 +1,47 @@
+.navbar {
+  width: 180px;
+  height: 100vh;
+  background-color: #030F33;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.navbar-button {
+  padding-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  
+  color: gainsboro;
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+
+.navbar-button::before{
+  content: '';
+  background-color: gainsboro;
+  display: block;
+  height: 5px;
+  width: 0%;
+  position: relative;
+  top: 30px;
+  transition: all ease-in-out 500ms;
+}
+
+.navbar-button:hover::before{
+  width: calc(100% - 35px);
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}

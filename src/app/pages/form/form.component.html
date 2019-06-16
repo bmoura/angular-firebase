@@ -1,0 +1,22 @@
+<div>
+  <form [formGroup]='formPerson'>
+    <div class="form-container">
+      <div class="header-form">
+        <h1 class="title-form">Cadastro de usuário</h1>
+      </div>
+      <div class="input-group">
+        <label class="label-form">Nome:</label>
+        <input class="input-form" type="text" formControlName='name'> 
+      </div>
+      <div class="input-group">
+        <label class="label-form">Data Nascimento:</label>
+        <input class="input-form" type="date" formControlName='birthday'>
+      </div>
+      <div class="input-group">
+        <label class="label-form">E-mail:</label>
+        <input class="input-form" type="email" formControlName='email'>
+      </div>
+      <button class="button-submit" type="submit" (click)='onSubmit()' [disabled]="formPerson.invalid">Cadastrar</button>
+    </div>
+  </form>
+</div>
