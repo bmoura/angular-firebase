@@ -1,6 +1,6 @@
 export interface Person {
   key?: string;
   name: string;
-  birhday: Date;
+  birthday: Date;
   email: string;
 }

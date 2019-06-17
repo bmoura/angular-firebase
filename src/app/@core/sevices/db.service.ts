@@ -15,23 +15,23 @@ export class DbService {
   ) { }
 
   create(person: Person) {
-    this.db.list('person').push(person);
+    return this.db.list('person').push(person);
   }
 
   update(person: Person, key: string) {
-    this.db.list('person').update(key, person);
+    return this.db.list('person').update(key, person);
   }
 
   delete(key: string) {
     this.db.list(`person/${key}`).remove();
   }
-  
+
   getAll(): Observable <any> {
     return this.db.list('person')
       .snapshotChanges()
       .pipe(
-        map(changes => changes.map(change => ({ 
-          key: change.payload.key, 
+        map(changes => changes.map(change => ({
+          key: change.payload.key,
           ...change.payload.val()
         })))
       );

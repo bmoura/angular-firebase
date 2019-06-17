@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Person } from 'src/app/@core/models/person.model';
 import { Observable } from 'rxjs';
 import { DbService } from 'src/app/@core/sevices/db.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list',
@@ -13,7 +14,8 @@ export class ListComponent implements OnInit {
   public peaple: Observable <Person[]>;
 
   constructor(
-    private dbService: DbService
+    private dbService: DbService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -21,7 +23,12 @@ export class ListComponent implements OnInit {
   }
 
   onClick(person: Person) {
-    console.log(person)
+    this.router.navigate(['new', person]);
+  }
+
+  remove($event: any, key: string) {
+    $event.stopPropagation();
+    this.dbService.delete(key);
   }
 
   getPeaple(): void {
