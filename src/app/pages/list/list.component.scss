@@ -1,3 +1,27 @@
+.button-excluir {
+  color: red;
+  background-color: transparent;
+  border: 0px solid white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.header-list {
+  background-color: #030F33;
+  border-radius: 10px 10px 0 0 ;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.line-birthday {
+  width: 20%;
+  padding-left: 15px;
+}
+
+.line-button {
+  width: 10%;
+}
+
 .list-container {
   margin-top: 10px;
   display: flex;
@@ -9,32 +33,14 @@
   box-shadow: 0 2px 8px #0d0d41;
 }
 
-.title-list{
-  color: #ffffff;
-  text-shadow: 2px 2px 5px #0D3ED4;
-  text-align: center;
+.line-email {
+  width: 35%;
+  padding-left: 15px;
 }
 
-.header-list {
-  background-color: #030F33;
-  border-radius: 10px 10px 0 0 ;
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.table-users{
-  width: 95%;
-}
-
-.table-header-row {
-  border-radius: 10px 10px 0 0;
-  padding-top: 10px ;
-  height: 30px;
-  display: flex;
-  flex-direction: row;
-  background-color: #0d0d41;
-  color: #ffffff;
-  font-weight: bold;
+.line-name {
+  width: 35%;
+  padding-left: 15px; 
 }
 
 .line-row {
@@ -52,30 +58,23 @@
   background-color: rgba(13, 63, 212, 0.384);
 }
 
-
-.line-name {
-  width: 35%;
-  padding-left: 15px; 
-}
-
-.line-email {
-  width: 35%;
-  padding-left: 15px;
-}
-
-.line-birthday {
-  width: 20%;
-  padding-left: 15px;
-}
-
-.line-button {
-  width: 10%;
-}
-
-.button-excluir {
-  color: red;
-  background-color: transparent;
-  border: 0px solid white;
+.table-header-row {
+  border-radius: 10px 10px 0 0;
+  padding-top: 10px ;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  background-color: #0d0d41;
+  color: #ffffff;
   font-weight: bold;
-  cursor: pointer;
+}
+
+.table-users{
+  width: 95%;
+}
+
+.title-list{
+  color: #ffffff;
+  text-shadow: 2px 2px 5px #0D3ED4;
+  text-align: center;
 }

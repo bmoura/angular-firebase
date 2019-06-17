@@ -1,3 +1,8 @@
+a {
+  display: block;
+  text-decoration: none;
+}
+
 .navbar {
   width: 180px;
   height: 100vh;
@@ -39,9 +44,4 @@
 
 .navbar-button:hover::before{
   width: calc(100% - 35px);
-}
-
-a {
-  display: block;
-  text-decoration: none;
 }

@@ -2,24 +2,51 @@
   <form [formGroup]='formPerson'>
     <div class="form-container">
       <div class="header-form">
-        <h1 class="title-form">{{ isEdit ? 'Editar' : 'Cadastro de' }} usuário</h1>
+        
+        <h1 class="title-form">
+          {{ isEdit ? 'Editar' : 'Cadastro de' }} usuário
+        </h1>
       </div>
+      
       <div class="input-group">
         <label class="label-form">Nome:</label>
         <input class="input-form" type="text" formControlName='name'> 
-        <span class="error-feedback" *ngIf="formPerson.get('name').hasError('required') && formPerson.get('name').touched">*É obrigatório</span>
+        
+        <span class="error-feedback" 
+          *ngIf="formPerson.get('name').hasError('required') 
+          && formPerson.get('name').touched">
+          *É obrigatório
+        </span>
       </div>
+      
       <div class="input-group">
         <label class="label-form">Data Nascimento:</label>
         <input class="input-form" type="date" formControlName='birthday'>
-        <span class="error-feedback" *ngIf="formPerson.get('birthday').hasError('required') && formPerson.get('birthday').touched">*É obrigatório</span>
+        
+        <span class="error-feedback" 
+          *ngIf="formPerson.get('birthday').hasError('required') 
+          && formPerson.get('birthday').touched">
+          *É obrigatório
+        </span>
       </div>
+      
       <div class="input-group">
         <label class="label-form">E-mail:</label>
         <input class="input-form" type="email" formControlName='email'>
-        <span class="error-feedback" *ngIf="formPerson.get('email').hasError('required') && formPerson.get('email').touched">*É obrigatório</span>
-        <span class="error-feedback" *ngIf="formPerson.get('email').hasError('email') && formPerson.get('email').touched">*E-mail inválido</span>
+        
+        <span class="error-feedback" 
+          *ngIf="formPerson.get('email').hasError('required') 
+          && formPerson.get('email').touched">
+          *É obrigatório
+        </span>
+        
+        <span class="error-feedback" 
+          *ngIf="formPerson.get('email').hasError('email') 
+          && formPerson.get('email').touched">
+          *E-mail inválido
+        </span>
       </div>
+      
       <button class="button-submit" type="submit" (click)='onSubmit()' >
         {{ isEdit ? "Atualizar" : "Cadastrar"}}
       </button>
