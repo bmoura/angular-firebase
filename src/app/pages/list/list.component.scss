@@ -39,7 +39,7 @@
 
 .line-row {
   padding-top: 5px ;
-  height: 20px;
+  height: 25px;
   display: flex;
   flex-direction: row;
   border-radius: 5px;
@@ -59,11 +59,23 @@
 }
 
 .line-email {
-  width: 45%;
+  width: 35%;
   padding-left: 15px;
 }
 
-.line-bithday {
+.line-birthday {
   width: 20%;
   padding-left: 15px;
+}
+
+.line-button {
+  width: 10%;
+}
+
+.button-excluir {
+  color: red;
+  background-color: transparent;
+  border: 0px solid white;
+  font-weight: bold;
+  cursor: pointer;
 }
